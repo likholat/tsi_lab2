@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<h1 style = "color: #369; font-family: Arial, sans-serif; font-size: 150%;">
+    Here you can see all evaluations
+</h1>
+<body>
+<form action = '/valuations' method = 'get' >
+    <table bordercolor = '#A9A9A9' border="1" cellpadding="7">
+        <tr style="color: #369; font-family: Arial, sans-serif; font-weight: lighter;">
+            <th>File name</th>
+            <th>Valuation</th>
+            <th>Comment</th>
+        </tr>
+        <% result.forEach(function (item){%>
+            <tr style="font-family: Arial, sans-serif; font-size: 100%;">
+                <th><%= item.filename%></th>
+                <th><%= item.mark %></th>
+                <th><%= item.comment%></th>
+            </tr>
+        <%});%>
+    </table>
+</form>
+<br>
+<form action = '/marks' method = 'get'>
+    <input type="submit" value="Back" style="width:150px"/>
+</form>
+
+</body>
+</html>

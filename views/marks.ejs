@@ -1,0 +1,46 @@
+<!--клиент-->
+<!DOCTYPE HTML>
+
+<html>
+    <h1 style = "color: #369; font-family: Arial, sans-serif; font-size: 150%;">
+        Work for evaluation
+    </h1>
+    <p> </p>
+    <body>
+    <p>
+        <iframe width = 500 height = 500 id = 'firstIframe' name = 'firstIframe' src="">
+            Ваш браузер не поддерживает плавающие фреймы!
+        </iframe>
+    <p>
+        <a href="http://localhost:3000/dir/<%=show.src1%>" target="firstIframe" onclick="document.getElementById('hid').value = '<%=show.src1%>';">Work 1</a>
+        <a href="http://localhost:3000/dir/<%=show.src2%>" target="firstIframe" onclick="document.getElementById('hid').value = '<%=show.src2%>';">Work 2</a>
+        <a href="http://localhost:3000/dir/<%=show.src3%>" target="firstIframe" onclick="document.getElementById('hid').value = '<%=show.src3%>';">Work 3</a>
+
+    </p>
+        <form action = '/marks' method = 'post' style="color: #191970; font-family: Arial, sans-serif; font-weight: lighter;">
+            <p>
+                <input type="hidden" name="hid" id = 'hid' value="">
+                <label>Your evaluation:
+                    <input type="number" id="mark" name = 'mark' min = '1' max = '5' placeholder = '1 - 5'/>
+                </label>
+            </p>
+            <p>
+                <label>Comment:
+                    <input type="text" id="comm" name = 'comm' placeholder = 'post a comment'/>
+                 </label>
+            </p>
+
+        <input type="submit" value="Send the evaluation" style="width:240px" />
+        </form>
+    <br>
+    <form action = '/valuations' method = 'get'>
+        <input type="submit" value="View other valuations" style="width:240px" />
+    </form>
+    <br>
+    <form action = '/' method = 'get'>
+        <input type="submit" value="Upload the new file" width="500" style="width:240px" />
+    </form>
+
+    </p>
+    </body>
+</html>
